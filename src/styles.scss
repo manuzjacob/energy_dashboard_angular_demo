@@ -1,0 +1,65 @@
+/* You can add global styles to this file, and also import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400&display=swap");
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+.container {
+    max-width: 100%;
+    margin: 30px auto;
+    overflow: auto;
+    height: 350px;
+    border: 1px solid steelblue;
+    padding: 30px;
+    border-radius: 5px;
+  }
+  .list {
+    width: 100%;
+    max-height: 180px;
+    margin:  auto;
+    overflow: auto;
+    height: 280px;
+  }
+  .btn {
+    display: inline-block;
+    background: #3f51b5;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 15px;
+    font-family: inherit;
+    align-items: center;
+  }
+  
+  .btn-block {
+    align-items: center;
+    display: block;
+    width: 100%;
+  }
+  
+  .form-control {
+    margin: 20px 0;
+  }
+  
+  .form-control label {
+    display: block;
+  }
+  
+  .form-control input {
+    width:  100% ;
+    height: 40px;
+    margin: 5px;
+    padding: 3px 7px;
+    font-size: 17px;
+  }
+  

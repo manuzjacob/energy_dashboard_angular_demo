@@ -1,0 +1,14 @@
+<br />
+<div class="item">
+  <div class="details">
+    <h2>{{ item.id }}. {{ item.name | titlecase  }} {{ item.kwh }} kWh</h2>
+  </div>
+  <div class="details" style="float: right">
+    <button mat-button (click)="editUser(item)">Edit</button>
+    <button mat-raised-button color="primary" (click)="openConfirmDialog(item)">
+      Select
+    </button>
+  </div>
+</div>
+
+

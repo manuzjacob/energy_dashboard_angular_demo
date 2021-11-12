@@ -1,0 +1,38 @@
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background-color: darkgrey;
+}
+
+::-webkit-scrollbar-thumb {
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+}
+
+.mat-form-field + .mat-form-field {
+  margin-left: 8px;
+}
+.w-100 {
+  width: 100%;
+}
+.item {
+  background: #f4f4f4;
+  padding: 20px 20px;
+  margin: auto;
+  width: 100%;
+  
+}
+
+.task h3 {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.details {
+  display: inline-flex;
+}
+button {
+  float: right;
+  
+}

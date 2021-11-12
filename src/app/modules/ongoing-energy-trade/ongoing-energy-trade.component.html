@@ -1,0 +1,15 @@
+
+<div class="item">
+  <div class="details">
+    <h2>{{ item.name | uppercase }} {{ item.kwh }} kWh</h2>
+  </div>
+  <div class="timer">
+    <!-- <button mat-raised-button color="primary" (click)="onDelete(item)">
+      Delete
+    </button> -->
+    Time Left:
+    <countdown #cd [config]="{ leftTime: 10 }"></countdown>
+  </div>
+
+  <mat-progress-bar mode="indeterminate"></mat-progress-bar>
+</div>

@@ -1,0 +1,116 @@
+<div>
+  <mat-accordion>
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title> Weather/Generation Forcast </mat-panel-title>
+        <mat-panel-description> For the next 6 days </mat-panel-description>
+      </mat-expansion-panel-header>
+      <mat-card
+        fxFlex="100"
+        fxLayout="row"
+        fxLayoutAlign="space-between center"
+        fxLayoutGap="20px"
+      >
+        <app-widget-weather
+          *ngFor="let weatherData of weatherDataList"
+          [weatherData]="weatherData"
+        ></app-widget-weather>
+      </mat-card>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <br />
+</div>
+
+<div
+  fxLayout="row"
+  fxLayoutAlign="space-between center"
+  fxLayoutGap="20px"
+  class="stats-cards"
+>
+  <mat-card fxFlex="25">
+    <app-widget-card
+      label="Total Generation today(kWh)"
+      total="80/150"
+      percentage="53"
+    ></app-widget-card>
+  </mat-card>
+  <mat-card fxFlex="25">
+    <app-widget-card
+      label="Total Generation today(kWh)"
+      total="80/150"
+      percentage="53"
+    ></app-widget-card>
+  </mat-card>
+  <mat-card fxFlex="25">
+    <app-widget-card
+      label="Total usage(kWh)"
+      total="40"
+      percentage="30"
+    ></app-widget-card>
+  </mat-card>
+  <mat-card fxFlex="25">
+    <app-widget-card
+      label="Total transactions(Euro) "
+      total="600"
+      percentage="20"
+    ></app-widget-card>
+  </mat-card>
+</div>
+
+<br />
+<div>
+  <app-widget-area></app-widget-area>
+</div>
+
+<br />
+
+<mat-divider></mat-divider>
+
+<br />
+<button mat-stroked-button color="primary" (click)="showPostEnergy()">
+  Request Energy
+</button>
+
+<div fxLayout="row" fxLayoutAlign="space-between center" fxLayoutGap="20px">
+  <div fxFlex="50">
+    <div *ngIf="isPostEnergyVisisble">
+      <app-post-energy-request
+        (onAddConsumer)="addConsumer($event)"
+      ></app-post-energy-request>
+      <button (click)="hidePostEnergy()" value="Cancel" class="btn btn-block">
+        Cancel
+      </button>
+    </div>
+    <div class="container" *ngIf="!isPostEnergyVisisble">
+      <h2>Energy Request</h2>
+      <div class="form-control">
+        
+        <input type="text" name="" placeholder="Search by name or kWh..."  [formControl] = "searchField">
+      </div>
+      <div class="list">
+        
+        <app-energy-request-list
+          *ngFor="let consumer of energyRequestList$ | async"
+          [item]="consumer"
+          (onToggleMove)="toggleMove(consumer)"
+        ></app-energy-request-list>
+      </div>
+    </div>
+  </div>
+  <div class="container" fxFlex="50">
+    <h2>Ongoing Trade</h2>
+    <div class="list">
+      <app-ongoing-energy-trade
+        *ngFor="let consumer of onGoingTrade"
+        [item]="consumer"
+        (onDeleteConsumer) = deleteConsumer($event)
+      ></app-ongoing-energy-trade>
+    </div>
+  </div>
+  <br />
+
+  <br />
+  <br />
+  <br />
+</div>
+<mat-divider></mat-divider>
