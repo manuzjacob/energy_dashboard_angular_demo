@@ -1,10 +1,11 @@
 # Energy Dashboard
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.1.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.1 and using [JSON Server](https://github.com/typicode/json-server) version 0.16.3.
 
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `npm run server` for a json-server based database. Navigate to `http://localhost:3000/consumers` to see the database. Or 
 
 ## Code scaffolding
 
