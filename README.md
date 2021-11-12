@@ -5,7 +5,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-Run `npm run server` for a json-server based database. Navigate to `http://localhost:3000/consumers` to see the database. Or 
+Run `npm run server` for a json-server based database. Navigate to `http://localhost:3000/consumers` to see the database. Or browse the file detailsDB.json to check or direct updation of database. You can also add through the the application frontend simply by clicking 'Request energy' button.
 
 ## Code scaffolding
 
