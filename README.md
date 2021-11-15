@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.1 and using [JSON Server](https://github.com/typicode/json-server) version 0.16.3.
 
-It is a demo project to show the basic behaviour of an energy trading example where the excess energy can be sold inside a community. CRUD operations and reactive search functionality using [RxJS](https://github.com/ReactiveX/rxjs) are also implemented
+It is a demo project to show the basic behaviour of an energy trading example where the excess energy can be sold inside a community. CRUD operations and reactive search functionality using [RxJS](https://github.com/ReactiveX/rxjs) are also implemented.
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
